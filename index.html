@@ -38,18 +38,20 @@
             margin-top: 2rem;
         }
         .image-container {
-            text-align: center;
+            display: flex;
+            overflow-x: auto;
             margin-top: 1rem;
-            overflow: hidden;
+            padding: 1rem;
         }
         .image-container img {
             max-width: 25%; /* Images will be 1/4th of their original size */
             height: auto;
-            margin-bottom: 1rem;
+            margin: 0 0.5rem;
+            flex-shrink: 0;
             transition: transform 0.5s ease-in-out;
         }
-        .image-container:hover img {
-            transform: translateX(100%);
+        .image-container img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -73,14 +75,18 @@
                 </ul>
                 <p>ASTRA aims to provide a comprehensive tool for investors to manage and analyze their portfolios effectively.</p>
                 <div class="image-container">
-                    <img src="https://github.com/ddmathys/astra/raw/main/image1.jpg" alt="ASTRA Login Screen">
-                    <p>This is the login screen where users can enter their email and password to access their accounts once they have created them.</p>
-                    
-                    <img src="https://github.com/ddmathys/astra/raw/main/image2.jpg" alt="ASTRA Sign Up Screen">
-                    <p>This is the sign-up screen where users can create their accounts by providing their name, email, password, preferred currency, and frequency information.</p>
-                    
-                    <img src="https://github.com/ddmathys/astra/raw/main/image3.jpg" alt="ASTRA Reset Password Screen">
-                    <p>This is the reset password screen where users can reset their password if they forget it.</p>
+                    <div>
+                        <img src="https://github.com/ddmathys/astra/raw/main/image1.jpg" alt="ASTRA Login Screen">
+                        <p>This is the login screen where users can enter their email and password to access their accounts once they have created them.</p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/ddmathys/astra/raw/main/image2.jpg" alt="ASTRA Sign Up Screen">
+                        <p>This is the sign-up screen where users can create their accounts by providing their name, email, password, preferred currency, and frequency information.</p>
+                    </div>
+                    <div>
+                        <img src="https://github.com/ddmathys/astra/raw/main/image3.jpg" alt="ASTRA Reset Password Screen">
+                        <p>This is the reset password screen where users can reset their password if they forget it.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,15 +101,5 @@
     <footer class="bg-dark text-white text-center py-3 mt-4">
         <p>&copy; 2024 ASTRA</p>
     </footer>
-    <script>
-        document.querySelectorAll('.image-container img').forEach((img, index) => {
-            img.addEventListener('mouseover', () => {
-                img.style.transform = `translateX(${(index + 1) * 100}%)`;
-            });
-            img.addEventListener('mouseout', () => {
-                img.style.transform = 'translateX(0)';
-            });
-        });
-    </script>
 </body>
 </html>
