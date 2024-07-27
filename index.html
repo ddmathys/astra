@@ -43,15 +43,23 @@
             margin-top: 1rem;
             padding: 1rem;
         }
-        .image-container img {
-            max-width: 25%; /* Images will be 1/4th of their original size */
-            height: auto;
-            margin: 0 0.5rem;
+        .image-container > div {
+            text-align: center;
             flex-shrink: 0;
+            margin-right: 2rem;
+        }
+        .image-container img {
+            width: 300px; /* Larger images */
+            height: auto;
+            margin-bottom: 1rem;
             transition: transform 0.5s ease-in-out;
         }
         .image-container img:hover {
             transform: scale(1.1);
+        }
+        .image-container p {
+            max-width: 300px; /* Restrict text width */
+            margin: 0 auto;
         }
     </style>
 </head>
