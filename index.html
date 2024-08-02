@@ -30,17 +30,17 @@
         }
         .image-container {
             display: flex;
-            overflow-x: auto;
+            flex-wrap: wrap;
             margin-top: 1rem;
             padding: 1rem;
         }
         .image-container > div {
             text-align: center;
-            flex-shrink: 0;
-            margin-right: 2rem;
+            flex-basis: 30%;
+            margin: 1rem;
         }
         .image-container img {
-            width: 300px;
+            width: 100%;
             height: auto;
             margin-bottom: 1rem;
             transition: transform 0.5s ease-in-out;
@@ -49,8 +49,7 @@
             transform: scale(1.1);
         }
         .image-container p {
-            max-width: 300px;
-            margin: 0 auto;
+            margin: 0;
         }
     </style>
 </head>
@@ -65,19 +64,19 @@
                 <div class="image-container">
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/welcome.jpg" alt="Welcome Screen">
-                        <p>Welcome Screen</p>
+                        <p>Welcome: The starting screen of the ASTRA app.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/sign_in.jpg" alt="Sign In Screen">
-                        <p>Sign In Screen</p>
+                        <p>Sign In: Screen where users log in to their account.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/forgot_password.jpg" alt="Forgot Password Screen">
-                        <p>Forgot Password Screen</p>
+                        <p>Forgot Password: Screen for password recovery.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/login.jpg" alt="Login Screen">
-                        <p>Login Screen</p>
+                        <p>Login: Enter email and password to access the app.</p>
                     </div>
                 </div>
             </div>
@@ -88,11 +87,11 @@
                 <div class="image-container">
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/second.jpg" alt="Second Screen">
-                        <p>Second Screen</p>
+                        <p>Second: Screen displaying user's diary entries.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/second_filter.jpg" alt="Second Filter Screen">
-                        <p>Second Filter Screen</p>
+                        <p>Second Filter: Screen with filter options for diary entries.</p>
                     </div>
                 </div>
             </div>
@@ -103,17 +102,24 @@
                 <div class="image-container">
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/dashboard_1.jpg" alt="Dashboard Screen 1">
-                        <p>Dashboard Screen 1</p>
+                        <p>Dashboard 1: Overview of investment performance.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/dashboard_2.jpg" alt="Dashboard Screen 2">
-                        <p>Dashboard Screen 2</p>
+                        <p>Dashboard 2: Detailed breakdown of asset allocation.</p>
                     </div>
                     <div>
                         <img src="https://github.com/ddmathys/astra/raw/main/dashboard_3.jpg" alt="Dashboard Screen 3">
-                        <p>Dashboard Screen 3</p>
+                        <p>Dashboard 3: View of individual investment performance.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Download ASTRA</h2>
+                <p class="card-text">Click the link below to download the ASTRA APK:</p>
+                <a href="app-release.apk" class="btn btn-primary" download>Download ASTRA</a>
             </div>
         </div>
     </div>
