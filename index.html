@@ -30,13 +30,16 @@
         }
         .image-container {
             display: flex;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-            padding: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
         }
         .image-container > div {
+            scroll-snap-align: start;
             text-align: center;
-            flex-basis: 30%;
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 300px;
             margin: 1rem;
         }
         .image-container img {
@@ -67,7 +70,7 @@
                         <p>Welcome: The starting screen of the ASTRA app.</p>
                     </div>
                     <div>
-                        <img src="https://github.com/ddmathys/astra/raw/main/create_account.jpg" alt="Sign In Screen">
+                        <img src="https://github.com/ddmathys/astra/raw/main/sign_in.jpg" alt="Sign In Screen">
                         <p>Sign In: Screen where users log in to their account.</p>
                     </div>
                     <div>
